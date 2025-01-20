@@ -1,4 +1,4 @@
-declare module 'react-native-rsa-native' {
+declare module 'hugo-rsa-react-native' {
 	interface PublicKey {
 		public: string;
 	}
