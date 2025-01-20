@@ -1,5 +1,5 @@
 {
-  "name": "react-native-rsa-native",
+  "name": "hugo-rsa-react-native",
   "version": "2.0.5",
   "description": "A native implementation of RSA key generation and encryption/decryption.",
   "main": "index.js",
@@ -13,13 +13,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/amitaymolko/react-native-rsa-native.git"
+    "url": "https://github.com/HugoSave-SG/hugo-rsa-react-native"
   },
   "bugs": {
     "url": "https://github.com/amitaymolko/react-native-rsa-native/issues"
   },
   "author": {
-    "name": "Amitay Molko"
+    "name": "Amitay Molko (Original), Shubham Chakraborty"
   },
   "license": "MIT",
   "homepage": "https://github.com/amitaymolko/react-native-rsa-native#readme"

@@ -107,8 +107,9 @@ public class RSA {
 
     public String getPublicKey() throws IOException {
        byte[] pkcs1PublicKey = publicKeyToPkcs1(this.publicKey);
-       return dataToPem(PUBLIC_HEADER, pkcs1PublicKey);
-        // return Base64.encodeToString(this.publicKey.getEncoded(), Base64.DEFAULT);
+      // return dataToPem(PUBLIC_HEADER, pkcs1PublicKey);
+      return Base64.encodeToString(this.publicKey.getEncoded(), Base64.NO_WRAP);
+      
     }
 
     public String getPrivateKey() throws IOException {
@@ -177,12 +178,12 @@ public class RSA {
         privateSignature.initSign(this.privateKey);
         privateSignature.update(messageBytes);
         byte[] signature = privateSignature.sign();
-        return Base64.encodeToString(signature, Base64.DEFAULT);
+        return Base64.encodeToString(signature, Base64.NO_WRAP);
     }
 
     // b64 message
     public String sign64(String b64message, String algorithm) throws NoSuchAlgorithmException, InvalidKeySpecException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, InvalidKeyException, SignatureException {
-        byte[] messageBytes = Base64.decode(b64message, Base64.DEFAULT);
+        byte[] messageBytes = Base64.decode(b64message, Base64.NO_WRAP);
         return sign(messageBytes, algorithm);
     }
 
